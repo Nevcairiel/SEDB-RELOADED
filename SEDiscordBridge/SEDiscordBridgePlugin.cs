@@ -305,7 +305,10 @@ namespace SEDiscordBridge
         {
             //send status
             if (Config.UseStatus)
+            {
+                TickRetry = 5; // force immediate connection
                 StartTimer();
+            }
         }
 
         public void StartTimer()
